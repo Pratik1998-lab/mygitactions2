@@ -2,7 +2,7 @@ name:super-linter
 
 on:push
 
-job:
+jobs:
   super-lint:
   name:lint code base
   runs on:ubuntu-latest
