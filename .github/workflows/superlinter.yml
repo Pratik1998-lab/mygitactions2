@@ -1,19 +1,19 @@
-name:super-linter
+name: super-linter
 
-on:push
+on: push
 
 jobs:
   super-lint:
-  name:lint code base
-  runs on:ubuntu-latest
-  step1:
-      -name:checkout code
-       user:actions/checkout@v2
+    name: lint code base
+    runs-on: ubuntu-latest
+    step1:
+        -name: checkout code
+         user: actions/checkout@v2
        
-        -name:Run super-linter
-       user:github/super-linter@v3
-       env:
-          DEFAULT_BRANCH:main
-          GITHUB_TOKEN:${{secrets.GITHUB_TOKEN}}
+        -name: Run super-linter
+         user: github/super-linter@v3
+          env:
+            DEFAULT_BRANCH: main
+            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
        
        
